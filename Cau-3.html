@@ -1,0 +1,35 @@
+<!--
+
+Viết hàm isFibonacci() nhận vào một số nguyên,
+trả về true nếu số đó là số nằm trong dãy Fibonacci
+và false nếu không nằm trong dãy Fibonacci.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFibonacci(num) {
+        let a = 0, b = 1, temp = 0;
+        while (true) {
+            if (num == a) {
+                return true;
+            }
+            if (a > num) {
+                return false;
+            }
+            temp = b;
+            b += a;
+            a = temp;
+        }
+    }
+
+    console.log(isFibonacci(100));
+</script>
+</body>
+</html>
