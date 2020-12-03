@@ -14,15 +14,15 @@ Nếu tìm thấy số nguyên x trả về mảng sau khi xóa các số nguyê
 </head>
 <body>
 <script>
-    function tryRemoveFromArray(arr, x){
-        for (let i in arr){
+    function tryRemoveFromArray(arr, x) {
+        for (let i = arr.length; i >= 0; i--) {
             if (arr[i] == x)
                 arr.splice(i, 1);
         }
         return arr;
     }
 
-    console.log(tryRemoveFromArray([1,2,2,3,4,5,6,7,8,9], 2));
+    console.log(tryRemoveFromArray([1, 2, 2, 3, 2, 5, 6, 7, 8, 9], 2));
 </script>
 </body>
 </html>
