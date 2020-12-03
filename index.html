@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Bài thực hành kết thúc Module 1</title>
+    <script src="Cau-1.js"></script>
+    <script src="Cau-2.js"></script>
+    <script src="Cau-3.js"></script>
+    <script src="Cau-4.js"></script>
 </head>
 <body>
 <form action="">
     <fieldset>
         <legend>Câu 1:</legend>
         <input id="inputQuest1" type="text" placeholder="Viết 1 mảng tùy chọn. VD: 1,2,3,4,5" size="30">
-        <button type="button" onclick="">Find Max</button>
+        <button type="button" onclick="quest1()">Find Max</button>
         <p>Max: <span id="outputQuest1">0</span></p>
     </fieldset>
     <fieldset>
@@ -21,7 +25,9 @@
     </fieldset>
     <fieldset>
         <legend>Câu 3:</legend>
-
+        <input type="text" id="inputQuest3">
+        <button type="button">Kiểm tra số là 1 phần tử trong dãy Fibonacci</button>
+        <p>Answer: <span id="outputQuest3">False</span></p>
     </fieldset>
     <fieldset>
         <legend>Câu 4:</legend>
@@ -39,6 +45,13 @@
         </fieldset>
     </fieldset>
 </form>
-<canvas id="myCanvas"></canvas>
+
+<script>
+    function quest1(){
+        let value = document.getElementById('inputQuest1').value;
+        document.getElementById('outputQuest1').innerText = findMax(value);
+    }
+</script>
+
 </body>
 </html>
